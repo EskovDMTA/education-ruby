@@ -1,0 +1,18 @@
+<%= form_with model: @article do |form|%>
+<div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <%= article.errors.full_messages_for(:title)[1] if article.errors.present? %>
+</div>
+<div>
+    <%= form.label :body %><br>
+    <%= form.text_field :body %>
+    <%= article.errors.full_messages_for(:body)[1] if article.errors.present? %>
+</div>
+<div>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+    <%= article.errors.full_messages_for(:author)[1] if article.errors.present? %>
+</div>
+<%= form.submit %>
+<% end %>

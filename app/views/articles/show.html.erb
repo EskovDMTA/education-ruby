@@ -1,0 +1,9 @@
+<h1>Articles №<%= @article.id %> : <%= @article.title%></h1>
+    <p><%= @article.title %></p> 
+    <p><%= @article.body %></p> 
+    <small><%= @article.author%>, <%= @article.created_at %></small><hr>
+    
+<p><%= link_to 'Update article', edit_article_path(@article) %></p>
+<p><%= link_to 'Back to all articles', root_path %></p> 
+<p><%= link_to 'Delete articles', article_path(@article), data: { "turbo-method": :delete, confirm: 'You realy wanto to delete article?' } %></p> 
+
